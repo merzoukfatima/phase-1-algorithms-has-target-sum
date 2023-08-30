@@ -1,13 +1,13 @@
 function hasTargetSum(array, target) {
   // Write your algorithm here
 
-  /*fellow the index of the lessThenArray*/
+  /*fellow the index of the array*/
   let indexItem = 0;
   let result;
-  /*iterate over the lessThenArray */
+  /*iterate over the array */
   for (item of array) { //n
 
-    /*use find() to see if (target-item) exist in the lessThenArray*/
+    /*use find() to see if (target-item) exist in the array*/
     result = array.find((number, index) => {//n
       return number === target - item && indexItem != index; 
     });
@@ -19,7 +19,7 @@ function hasTargetSum(array, target) {
     if (result) return true; //1
   }
 
-  /* if we go over all the lessThenArray without returning true then we didn't find target thus return false*/
+  /* if we go over all the array without returning true then we didn't find target thus return false*/
   return false; //1
 }
 
